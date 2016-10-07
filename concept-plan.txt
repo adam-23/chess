@@ -17,8 +17,10 @@ Move order:
     move king or eliminate piece
       if king is still in check after all options have been exhausted:
         trigger Checkmate
-  
-  decide piece to move
+        
+[Pick piece first, list moves, enter move desired]
+ ----------------------------------------------
+  player chooses piece to move
     piece loads movement protocol (bishop moves 1,1 or 1,-1, -1,1 -1,-1)
       move protocol lists available moves
         move protocol checks current position of all pieces of same color
@@ -28,4 +30,15 @@ Move order:
             if command is available move, change piece coordinate to new coordinate
               if new coordinate is on top of oppposing piece coordinate, opposing piece coordinate becomes (16,16) and is deactivated
             replace old coordinate piece with blank
+------------------------------------------------
+
+
+[Enter piecename and move desired in single stroke]
+------------------------------------------------
+  load locations of opposing players
+  load move protocols of said piece
+    load available coordinates
+      check if player entered move is in available move squares
+        if yes, change piece coordinate to new square
+          if piece coordinate 
   
