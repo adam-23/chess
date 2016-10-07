@@ -1,0 +1,31 @@
+Every piece has coordinates
+every square has coordinates
+
+2 sets of pieces
+8 pawns
+2 knights
+2 rooks
+2 bishps
+1 king
+1 queen
+
+Every square has a name (A2, E2 for example)
+
+Move order:
+  check if king is in Check
+    if so, 
+    move king or eliminate piece
+      if king is still in check after all options have been exhausted:
+        trigger Checkmate
+  
+  decide piece to move
+    piece loads movement protocol (bishop moves 1,1 or 1,-1, -1,1 -1,-1)
+      move protocol lists available moves
+        move protocol checks current position of all pieces of same color
+          move protocol removes current positions from available moves
+        person types in command
+          command is checked with available moves
+            if command is available move, change piece coordinate to new coordinate
+              if new coordinate is on top of oppposing piece coordinate, opposing piece coordinate becomes (16,16) and is deactivated
+            replace old coordinate piece with blank
+  
