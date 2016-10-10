@@ -33,6 +33,20 @@ Move order:
 ------------------------------------------------
 
 
+king check test
+  (Check if own king is currently in check)
+white enter move
+  check if move is valid
+  king check test
+    (Check if own king is currently in check)
+    if not valid move or king still in check if move would have been executed, ask for a new move
+    if valid and own king not in check after valid move, piece modifies coordinates to new location
+      if piece now shares coordinates with opposing piece
+        move opposing piece to graveyard
+    king check test
+      (Check if enemy king is in check after)
+       if enemy king in check, opposing player begins turn in check and must eliminate threat
+
 [Enter piecename and move desired in single stroke]
 ------------------------------------------------
   load locations of opposing players
@@ -56,9 +70,20 @@ Move order:
         (idk how to check this, but analyze if there is any possible move that moves king out of the line of fire)
           (list all possible moves that put the king out of the line of fire)
           
+          
+          
+[Piece Class]
+--------------------
+color (white or black)
+death protocol
+current location
+starting location
+In check status?
+piece not allowed to go outside 1,1 or 8,8
 
 
 [Pawn]
+-------------------------------
 if white:
   [movement protocol]
     coordinate = y coordinate +1
@@ -120,6 +145,17 @@ move protocol
  
  Queen Protocol
  (Bishop Moveset+Rook Moveset)
+ 
+ 
+ King protocol
+  (X+1, Y+1)
+  (X+1, Y-1)
+  (X-1, Y+1)
+  (X-1, Y-1)
+  (X+1)
+  (X-1)
+  (Y+1)
+  (Y-1)
  
  
  
