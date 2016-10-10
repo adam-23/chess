@@ -40,5 +40,87 @@ Move order:
     load available coordinates
       check if player entered move is in available move squares
         if yes, change piece coordinate to new square
-          if piece coordinate 
+          if piece coordinate = opposing piece coordinate:
+            opposing piece coordinate sent to (0,0) and move protocol is no longer applied to it. Can no longer be accessed by player
+    after moving, load move protocols of all player pieces and check if opposing king is in check. 
+      if king in check, other player is loaded into check status.
+
+
+[Check Status]
+--------------
+(after every move, analyze the board to see if king is in check)
+  if king is in line of fire as available coordinate, check status is loaded
+  player must propose a move
+    check if proposed new location of king continues to put him in check
+      if king is still in line of fire from another piece after moving, ask player to move again
+        (idk how to check this, but analyze if there is any possible move that moves king out of the line of fire)
+          (list all possible moves that put the king out of the line of fire)
+          
+
+
+[Pawn]
+if white:
+  [movement protocol]
+    coordinate = y coordinate +1
+   [attack protocol]
+    coordinate = y coordinate+1
+    if x coordinate -1 is shared by opposing piece:
+      x coordinate = x coordinate -1
+     (same ocnditions for x +1)
+    [skip protocol]
+      if y coordinate = 2, first move can be y+=2
+    [en passant]
+      if pawn on row 6 and enemy pawn double jumps past, 
+        y can move +1, and enemy pawn is sent to grave yard
+    [upgrade protocol]
+        if y coordinate = 8, pawn turns into Queen, Knight, Rook, or Bishop as specified by user
+     
+if black, y coordinate +=-1
+ --------------------------------------------
+ 
+ 
+ 
+ 
+ 
+[Rook]
+-------------- 
+ [x move]
+ check if any piece is in the x coordinates (1,8)
+  if piece in x coord:
+    if piece is opposing, move is still valid to replace
+      piece gets replaced, sent to 0,0
+      
+      
+  [y-move]
+    check all available moves by minusing Y coordinates from current position
+    change y coordinate to new coordinate
+      piece gets replaced
+
+[Knight]
+Available moves
+X+2, Y+1
+X-2, Y+1
+X+2, Y-1
+X-2, Y-1
+X+1, Y+2
+X+1, Y-2
+X-1, Y+2
+X-2, Y+1
+  remove all moves that currently have a same piece in them, or if move would put king into check
   
+  
+  
+Bishop
+move protocol
+  (X+1, Y+1)*n
+  (X+1, Y-1)*n
+  (X-1, Y+1)*n
+  (X-1, Y-1)*n
+  
+ 
+ Queen Protocol
+ (Bishop Moveset+Rook Moveset)
+ 
+ 
+ 
+ 
