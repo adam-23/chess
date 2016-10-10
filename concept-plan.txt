@@ -99,6 +99,11 @@ if white:
         y can move +1, and enemy pawn is sent to grave yard
     [upgrade protocol]
         if y coordinate = 8, pawn turns into Queen, Knight, Rook, or Bishop as specified by user
+        
+        
+    attack protocol
+      (Y+1, X+/- 1)
+      check if king is in said rows
      
 if black, y coordinate +=-1
  --------------------------------------------
@@ -121,6 +126,11 @@ if black, y coordinate +=-1
     change y coordinate to new coordinate
       piece gets replaced
 
+[attack protocol = X +/- 1,2, 3, 4, 5, 6, 7,
+                or Y
+
+
+
 [Knight]
 Available moves
 X+2, Y+1
@@ -132,7 +142,7 @@ X+1, Y-2
 X-1, Y+2
 X-2, Y+1
   remove all moves that currently have a same piece in them, or if move would put king into check
-  
+  attack protocol is the same  
   
   
 Bishop
