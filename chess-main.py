@@ -60,3 +60,49 @@ class Queen(Piece)
   (Y+1)
   (Y-1)
   
+  
+"""
+[Load White moves]
+For 1st player, load moves
+    Available moves should be loaded right at the beginning of the game
+    load pawn moves
+    rook
+    knight
+    bishop
+    queen
+    king
+  
+[Check protocol] 
+    removes available moves that would keep king in check OR put king in check
+    
+    if no moves are left, checkmate activates and game is over
+   
+  
+[White player enters move]
+  
+[game checks if move is in available white moves]
+    if not, ask player again for moves
+
+[Change Piece Location]
+[If possible, remove enemy to graveyard]
+[Start opposing king check if applicable]
+------------
+[Load Available Black Moves]
+  pawn
+  rook
+  knight
+  bishop
+  queen
+  king
+
+[Check Protocol]
+
+[Black Player enters move]
+
+[Game checks if player entered move is in available moves list
+    if not, ask player again for move
+    if yes, change piece location
+        if piece shares location with enemy piece after move, change enemy piece status to dead and remove from board
+    
+"""
+ 
