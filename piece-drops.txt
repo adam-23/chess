@@ -1,0 +1,110 @@
+Pawn
+    Coins
+    Gladius
+    Spear
+    Shield
+    Infantry Helm
+    Infantry Armor
+    Lucky Charm
+    Rubbish
+    Knife
+    Rope
+    Flint
+    Food
+    Bad Food
+
+Knight
+    Coins
+    Ingots
+    Lance
+    Knightsword
+    Greatsword
+    Mace
+    Greatshield
+    Knight Helm
+    Knight Armor
+    Lucky Charm
+    Rubbish
+    Dagger
+    Rope
+    Food
+
+Bishop
+    Ivory
+    Bow
+    Arrow
+    Lightbow
+    Holy Arrow
+    Talisman
+    Jewel
+    Mitre
+    Robe
+    Ornamental Blade
+    Cloak
+    Scarf
+    Coins
+    Food
+    Staff
+    Tome
+    Artifact
+    Bone
+    Fossil
+
+Rook
+    Crossbow
+    Pitch
+    Siege Ammo
+    Lumber
+    Chariot Wheels
+        Ornaments
+        Carriage
+    Stone
+    Food
+    Coins
+    Ingots
+    Greatshields
+    Lances
+    Chemist Elements
+    Rampart pieces
+    Heavy Armor
+    Heavy Helm
+    Greataxe
+    Build tools
+    Iron Pieces
+    Coal
+    Axe
+
+Queen
+    Ingots
+    Maps
+    Draft Order
+    Tax Order
+    Jewels
+    Coins
+    Top Food
+    Chemist elements
+    Robe
+    Cloak
+    Scarf
+    Lightbow
+    Lightsword
+    War Order
+    Coronet
+
+King
+    Lightsword
+    Lightshield
+    Draft Order
+    Ingots
+    Tax Order
+    Build Order
+    Jewels
+    Coins
+    Chemist Elements
+    War Order
+    Crown
+    Gold Armor
+    Relic
+    Artifact
+    Tome
+    Fossil
