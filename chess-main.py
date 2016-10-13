@@ -4,9 +4,8 @@ class Piece:
         self.name = name
     x_loc = 0
     y_loc = 0
-    pieceLocation = [(x_loc, y_loc)]
-    team = 'white'  # or 'black'
-    available_moves = [(0, 0), (2, 2)]
+    team = '(white)'  # or 'black'
+    available_moves = []
 
     def move_piece(self, available_moves):
         x_player_input = input('Input the x move.  ')
@@ -16,18 +15,22 @@ class Piece:
             self.y_loc = y_player_input
 
     def clear_moves(self):
-            self.available_moves = []
+        self.available_moves = []
 
-p = Piece('p2')
-print(p.available_moves, p.team, p.pieceLocation)
-for term in p.available_moves:
-    if p.pieceLocation == term in p.available_moves:
-        print("Whoo it works")
+    def status_check(self):
+        print(self.name, self.team, "x =", self.x_loc, "y =", self.y_loc)
+
+p = Piece('test piece 1')
+p.status_check()
+if p.available_moves == []:
+    print("Available moves are empty.")
 
 
 class Pawn(Piece):
-    x_loc = 0
-    y_loc = 2
+    def __init__(self, x_loc, y_loc, name):
+        self.x_loc = x_loc
+        self.y_loc = y_loc
+        self.name = name
     # RIGHT NOW I'M PROGRAMMING ONLY WITH WHITE IN MIND
     'Pawn class moves forward and attacks diagonally in front of it.'
     # Can upgrade to new class on reaching the other end of the board.'
@@ -37,7 +40,6 @@ class Pawn(Piece):
         available_y = (y_loc + 1)
         # if there's no piece occupying (x_loc, available_y) then add to the available moves list
         available_moves.append((x_loc, available_y))
-
         return
 
     def double_jump(self, x_loc, y_loc, available_moves):
@@ -46,12 +48,19 @@ class Pawn(Piece):
             # available_moves.append(x_loc, available_y)
             return
   
-    def pawnStrike(self, x_loc, y_loc):
+    """def pawnStrike(self, x_loc, y_loc):
         if y_loc +1 and x_loc +-1:  # contains a piece,
             # add that move to available moves
             # replace that piece
             # recipient piece x_loc, y_loc = 0, 0
-            return
+            return"""
+
+pawn1 = Pawn(1, 2, "pawn1")
+pawn1.status_check()
+pawn1.advance(pawn1.x_loc, pawn1.y_loc, pawn1.available_moves)
+pawn1.status_check()
+print(pawn1.available_moves)
+
 
 
 
