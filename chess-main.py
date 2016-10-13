@@ -1,36 +1,71 @@
 class Piece:
-  'Every piece has a physical location, a color, and a set of moves.'
-  x-loc = 0
-  y-loc = 0
-  pieceLocation = (x-loc, y-loc)
-  team = 'white' # or 'black'
-  
-  
+    """Every piece has a physical location, a color, and a set of moves."""
+    def __init__(self, name):
+        self.name = name
+    x_loc = 0
+    y_loc = 0
+    pieceLocation = [(x_loc, y_loc)]
+    team = 'white'  # or 'black'
+    available_moves = [(0, 0), (2, 2)]
+
+    def move_piece(self, available_moves):
+        x_player_input = input('Input the x move.  ')
+        y_player_input = input('Input the y move.  ')
+        if [x_player_input, y_player_input] in available_moves:
+            self.x_loc = x_player_input
+            self.y_loc = y_player_input
+
+    def clear_moves(self):
+            self.available_moves = []
+
+p = Piece('p2')
+print(p.available_moves, p.team, p.pieceLocation)
+for term in p.available_moves:
+    if p.pieceLocation == term in p.available_moves:
+        print("Whoo it works")
+
+
 class Pawn(Piece):
-# RIGHT NOW I'M PROGRAMMING ONLY WITH WHITE IN MIND
-  'Pawn class moves forward and attacks diagonally in front of it. Can upgrade to new class on reaching the other end of the board.'
-  pieceLocation = (0, 2)
+    x_loc = 0
+    y_loc = 2
+    # RIGHT NOW I'M PROGRAMMING ONLY WITH WHITE IN MIND
+    'Pawn class moves forward and attacks diagonally in front of it.'
+    # Can upgrade to new class on reaching the other end of the board.'
+
+    def advance(self, x_loc, y_loc, available_moves):
+        # if piece not in front:
+        available_y = (y_loc + 1)
+        # if there's no piece occupying (x_loc, available_y) then add to the available moves list
+        available_moves.append((x_loc, available_y))
+
+        return
+
+    def double_jump(self, x_loc, y_loc, available_moves):
+        if y_loc == 2 and (x_loc, (y_loc + 2)):  # is not shared by any other piece:
+            # available_y = y_loc +2
+            # available_moves.append(x_loc, available_y)
+            return
   
-  def advance(pieceLocation)
-    # if piece not in front:
-      y-loc += 1
-  
-  def double-jump(pieceLocation):
-    if y-loc = 2:
-      # next available move can also include (y-loc) + 2
-  
-  def pawnStrike(pieceLocation):
-    if y-loc +1 and x-loc +-1 contains a piece,
-      replace that piece
-      recipient piece x-loc, y-loc = 0, 0
-      
-      
+    def pawnStrike(self, x_loc, y_loc):
+        if y_loc +1 and x_loc +-1:  # contains a piece,
+            # add that move to available moves
+            # replace that piece
+            # recipient piece x_loc, y_loc = 0, 0
+            return
+
+
+
+
+
+
+
+"""
 class Rook(Piece)
-  available x-loc squares = (add or subtract x-loc until you reach a piece)
-    if piece is same color, stop there
-     if piece is dif color, you can replace piece and send to graveyard
+    available x_loc squares = (add or subtract x_loc until you reach a piece)
+        if piece is same color, stop there
+        if piece is dif color, you can replace piece and send to graveyard
      
-  y-loc protocol is the same
+  y_loc protocol is the same
   
   
 class Bishop(Piece)
@@ -45,8 +80,8 @@ class Bishop(Piece)
     
 class Queen(Piece)
   # Starting location:
-    x-loc = 4
-    y-loc = 1
+    x_loc = 4
+    y_loc = 1
     
 
 
@@ -60,49 +95,4 @@ class Queen(Piece)
   (Y+1)
   (Y-1)
   
-  
 """
-[Load White moves]
-For 1st player, load moves
-    Available moves should be loaded right at the beginning of the game
-    load pawn moves
-    rook
-    knight
-    bishop
-    queen
-    king
-  
-[Check protocol] 
-    removes available moves that would keep king in check OR put king in check
-    
-    if no moves are left, checkmate activates and game is over
-   
-  
-[White player enters move]
-  
-[game checks if move is in available white moves]
-    if not, ask player again for moves
-
-[Change Piece Location]
-[If possible, remove enemy to graveyard]
-[Start opposing king check if applicable]
-------------
-[Load Available Black Moves]
-  pawn
-  rook
-  knight
-  bishop
-  queen
-  king
-
-[Check Protocol]
-
-[Black Player enters move]
-
-[Game checks if player entered move is in available moves list
-    if not, ask player again for move
-    if yes, change piece location
-        if piece shares location with enemy piece after move, change enemy piece status to dead and remove from board
-    
-"""
- 
