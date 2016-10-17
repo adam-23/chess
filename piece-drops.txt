@@ -1,72 +1,73 @@
 Pawn
-    Coins
-    Gladius
-    Spear
-    Shield
-    Infantry Helm
-    Infantry Armor
-    Lucky Charm
-    Rubbish
-    Knife
-    Rope
-    Flint
-    Food
-    Bad Food
+    Coins 50%
+    Gladius 10%
+    Spear 12%
+    Shield 15%
+    Infantry Helm 20%
+    Infantry Armor 10%
+    Lucky Charm 5%
+    Rubbish 13%
+    Knife 30%
+    Rope 8%
+    Flint 5%
+    Food 40%
+    Bad Food 10%
 
 Knight
-    Coins
-    Ingots
-    Lance
-    Knightsword
-    Greatsword
-    Mace
-    Greatshield
-    Knight Helm
-    Knight Armor
-    Lucky Charm
-    Rubbish
-    Dagger
-    Rope
-    Food
+    Coins 50%
+    Ingots 2%
+    Lance 20%
+    Knightsword 40%
+    Greatsword 6%
+    Mace 10%
+    Greatshield 5%
+    Knight Helm 50%
+    Knight Armor 20%
+    Lucky Charm 4%
+    Rubbish 8%
+    Dagger 15%
+    Rope 2%
+    Food 10%
 
 Bishop
-    Ivory
-    Bow
-    Arrow
-    Lightbow
-    Holy Arrow
-    Talisman
-    Jewel
-    Mitre
-    Robe
-    Ornamental Blade
-    Cloak
-    Scarf
-    Coins
-    Food
-    Staff
-    Tome
-    Artifact
-    Bone
-    Fossil
+    Ivory 10%
+    Bow 20%
+    Arrow 40%
+    Lightbow 2%
+    Holy Arrow 5%
+    Talisman 15%
+    Jewel 5%
+    Mitre 50%
+    Robe 30%
+    Ornamental Blade 1%
+    Cloak 30%
+    Scarf 10%
+    Coins 12%
+    Food 2%
+    Staff 15%
+    Tome 11%
+    Artifact 1%
+    Bone 18%
+    Fossil 1%
 
 Rook
-    Crossbow
-    Pitch
-    Siege Ammo
-    Lumber
-    Chariot Wheels
-        Ornaments
-        Carriage
-    Stone
-    Food
-    Coins
-    Ingots
-    Greatshields
-    Lances
-    Chemist Elements
-    Rampart pieces
-    Heavy Armor
+    Crossbow 30%
+    Bolts 30%
+    Pitch 40%
+    Siege Ammo 25%
+    Lumber 20%
+    Chariot Wheels 10%
+    Chariot Spikes 5%
+    Chariot Carriage 8%
+    Stone 15%
+    Food 20%
+    Coins 20%
+    Ingots 25%
+    Greatshields 10%
+    Lances 32%
+    Chemist Elements 2%
+    Rampart pieces 10%
+    Heavy Armor 
     Heavy Helm
     Greataxe
     Build tools
@@ -94,6 +95,7 @@ Queen
 King
     Lightsword
     Lightshield
+    Ornamental Blade
     Draft Order
     Ingots
     Tax Order
