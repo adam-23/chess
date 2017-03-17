@@ -1,5 +1,5 @@
 Every piece has coordinates
-every square has coordinates
+every square has coordinates at x and y.
 
 2 sets of pieces
 8 pawns
