@@ -1,7 +1,9 @@
 class Piece:
     """Every piece has a physical location, a color, and a set of moves."""
+
     def __init__(self, name):
         self.name = name
+
     x_loc = 0
     y_loc = 0
     team = '(white)'  # or 'black'
@@ -20,6 +22,9 @@ class Piece:
     def status_check(self):
         print(self.name, self.team, "x =", self.x_loc, "y =", self.y_loc)
 
+    def
+
+
 p = Piece('test piece 1')
 p.status_check()
 if p.available_moves == []:
@@ -32,8 +37,10 @@ class Pawn(Piece):
         self.x_loc = x_loc
         self.y_loc = y_loc
         self.name = name
+
     # RIGHT NOW I'M PROGRAMMING ONLY WITH WHITE IN MIND
     'Pawn class moves forward and attacks diagonally in front of it.'
+
     # Can upgrade to new class on reaching the other end of the board.'
 
     @staticmethod
@@ -50,7 +57,7 @@ class Pawn(Piece):
             # available_y = y_loc +2
             # available_moves.append(x_loc, available_y)
             return
-  
+
     """def pawnStrike(self, x_loc, y_loc):
         if y_loc +1 and x_loc +-1:  # contains a piece,
             # add that move to available moves
@@ -58,18 +65,12 @@ class Pawn(Piece):
             # recipient piece x_loc, y_loc = 0, 0
             return"""
 
+
 pawn1 = Pawn(1, 2, "pawn1")
 pawn1.status_check()
 pawn1.advance(pawn1.x_loc, pawn1.y_loc, pawn1.available_moves)
 pawn1.status_check()
 print(pawn1.available_moves)
-
-
-
-
-
-
-
 
 """
 -  
