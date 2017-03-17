@@ -8,7 +8,7 @@ class Piece:
     available_moves = []
 
     def move_piece(self, available_moves):
-        x_player_input = input('Input the x move.  ')
+        x_player_input = input('Input the x move.  ') #Or: X: 
         y_player_input = input('Input the y move.  ')
         if [x_player_input, y_player_input] in available_moves:
             self.x_loc = x_player_input
@@ -28,6 +28,7 @@ if p.available_moves == []:
 
 class Pawn(Piece):
     def __init__(self, x_loc, y_loc, name):
+        super().__init__(name)
         self.x_loc = x_loc
         self.y_loc = y_loc
         self.name = name
@@ -35,12 +36,14 @@ class Pawn(Piece):
     'Pawn class moves forward and attacks diagonally in front of it.'
     # Can upgrade to new class on reaching the other end of the board.'
 
-    def advance(self, x_loc, y_loc, available_moves):
+    @staticmethod
+    def advance(x_loc, y_loc, available_moves):
         # if piece not in front:
         available_y = (y_loc + 1)
         # if there's no piece occupying (x_loc, available_y) then add to the available moves list
         available_moves.append((x_loc, available_y))
         return
+
 
     def double_jump(self, x_loc, y_loc, available_moves):
         if y_loc == 2 and (x_loc, (y_loc + 2)):  # is not shared by any other piece:
