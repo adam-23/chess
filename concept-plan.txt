@@ -5,7 +5,7 @@ every square has coordinates at x and y.
 8 pawns
 2 knights
 2 rooks
-2 bishps
+2 bishops
 1 king
 1 queen
 
@@ -13,11 +13,11 @@ Every square has a name (A2, E2 for example)
 
 Move order:
   check if king is in Check
-    if so, 
+    if so,
     move king or eliminate piece
       if king is still in check after all options have been exhausted:
         trigger Checkmate
-        
+
 [Pick piece first, list moves, enter move desired]
  ----------------------------------------------
   player chooses piece to move
@@ -56,7 +56,7 @@ white enter move
         if yes, change piece coordinate to new square
           if piece coordinate = opposing piece coordinate:
             opposing piece coordinate sent to (0,0) and move protocol is no longer applied to it. Can no longer be accessed by player
-    after moving, load move protocols of all player pieces and check if opposing king is in check. 
+    after moving, load move protocols of all player pieces and check if opposing king is in check.
       if king in check, other player is loaded into check status.
 
 
@@ -69,9 +69,9 @@ white enter move
       if king is still in line of fire from another piece after moving, ask player to move again
         (idk how to check this, but analyze if there is any possible move that moves king out of the line of fire)
           (list all possible moves that put the king out of the line of fire)
-          
-          
-          
+
+
+
 [Piece Class]
 --------------------
 color (white or black)
@@ -95,32 +95,32 @@ if white:
     [skip protocol]
       if y coordinate = 2, first move can be y+=2
     [en passant]
-      if pawn on row 6 and enemy pawn double jumps past, 
+      if pawn on row 6 and enemy pawn double jumps past,
         y can move +1, and enemy pawn is sent to grave yard
     [upgrade protocol]
         if y coordinate = 8, pawn turns into Queen, Knight, Rook, or Bishop as specified by user
-        
-        
+
+
     attack protocol
       (Y+1, X+/- 1)
       check if king is in said rows
-     
+
 if black, y coordinate +=-1
  --------------------------------------------
- 
- 
- 
- 
- 
+
+
+
+
+
 [Rook]
--------------- 
+--------------
  [x move]
  check if any piece is in the x coordinates (1,8)
   if piece in x coord:
     if piece is opposing, move is still valid to replace
       piece gets replaced, sent to 0,0
-      
-      
+
+
   [y-move]
     check all available moves by minusing Y coordinates from current position
     change y coordinate to new coordinate
@@ -142,21 +142,21 @@ X+1, Y-2
 X-1, Y+2
 X-2, Y+1
   remove all moves that currently have a same piece in them, or if move would put king into check
-  attack protocol is the same  
-  
-  
+  attack protocol is the same
+
+
 Bishop
 move protocol
   (X+1, Y+1)*n
   (X+1, Y-1)*n
   (X-1, Y+1)*n
   (X-1, Y-1)*n
-  
- 
+
+
  Queen Protocol
  (Bishop Moveset+Rook Moveset)
- 
- 
+
+
  King protocol
   (X+1, Y+1)
   (X+1, Y-1)
@@ -166,7 +166,3 @@ move protocol
   (X-1)
   (Y+1)
   (Y-1)
- 
- 
- 
- 
