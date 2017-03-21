@@ -96,5 +96,25 @@ class Player:
 
 class Overseer:
     """Runs game saving, determines determines victory, idk what else for."""
-    def game_log(self, p1, p2):
+
+    def move_log(self, move_input):
+        """Write moves to temporary file."""
+        # Should this really be in Overseer? Why not player?
         # This will be the place to add the file writing in a .txt
+        # open (filename based on player names, else assign the name game[int])
+        # where the filename of the [int] increases by +1 for the comparison
+        # to the most recent game of the same type, just so the player can log
+        2+2
+
+    def start_game_timer(self):
+        """Start game clock."""
+
+    def stop_game_timer(self):
+        """Stop game clock."""
+
+    def write_game_time(self, game_time):
+        """Total game time needs to be written to the final game log file."""
+
+    @staticmethod
+    def write_move_log():
+        """Read the contents of move log temp file, write to game log."""
